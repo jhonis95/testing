@@ -25,4 +25,27 @@ const myDate = function() {
   }
   
   myDate();
-  
+//exemple by mmyself
+const Uber=true
+const callUber= new Promise(function(resolve,reject){
+  if(Uber){
+    const address={
+      location: 'vilamix',
+      price:50,
+      people:3
+    }
+    resolve(address)
+  }else{
+    reject(new Error('didnt pick the call'))
+  }
+});
+const calling=function(){
+  callUber.then(function(address){
+    console.log('got the uber')
+    console.log(address)
+  })
+  callUber.catch(function(refuse){
+    console.log(refuse)
+  })
+}
+calling();
