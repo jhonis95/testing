@@ -1,19 +1,20 @@
 //testing XMLHttpRequests
-const xmlObject= new XMLHttpRequest();//Making the object
+// const xmlObject= new XMLHttpRequest();//Making the object
 
-xmlObject.addEventListener('load',()=>{ //event to handle if the request is accept
-  console.log("worked");
-  const data= JSON.parse(xmlObject.response);    
-  for(let items of data){
-    console.log(items) 
-  }
-});
-xmlObject.addEventListener("error",()=>{
-  console.log("deu ruim")
-})
-xmlObject.open('GET','https://fakestoreapi.com/products/')//where to get the request
-xmlObject.send() //majing the request
+// xmlObject.addEventListener('load',()=>{ //event to handle if the request is accept
+//   console.log("worked");
+//   const data= JSON.parse(xmlObject.response);    
+//   for(let items of data){
+//     console.log(items) 
+//   }
+// });
+// xmlObject.addEventListener("error",()=>{
+//   console.log("deu ruim")
+// })
+// xmlObject.open('GET','https://fakestoreapi.com/products/')//where to get the request
+// xmlObject.send() //majing the request
 
+//************************************************ */
 //Nested XHR HTTP Requests
 // const firstReq = new XMLHttpRequest();
 // firstReq.addEventListener('load', function() {
@@ -38,3 +39,48 @@ xmlObject.send() //majing the request
 // firstReq.open('GET', 'https://swapi.co/api/planets/');
 // firstReq.send();
 // console.log('Request Sent!');
+
+//************************************************ */
+//Async and Await
+async function add(x,y){//async function return a promise
+  if(typeof x!=='number'||typeof y!=='number'){
+    throw 'inputs must be a number'//reject
+  }
+  return x+y;//resolve
+}
+add().then((retorno)=>{
+  console.log(`o valor da  soma foi:${retorno}`)
+}).catch((err)=>{
+    console.log(err)
+})
+//without async
+function add(x,y){
+  return new Promise((resolve,reject)=>{
+    if(typeof x!=='number'||typeof y!=='number'){
+      reject('inputs must be a number')//reject
+    }
+    resolve(x+y);
+  })
+}
+//AWAIT   Await eliminates the use of callbacks in .then()and .catch(). 
+//without await
+function getPlanets(){
+  return axios.get('https://swapi.co/api/planets/');
+}
+getPlanets().then((res)=>{
+  console.log(res.data);
+})
+//with await
+async function getPlanets(){
+  const res= await axios.get('https://swapi.co/api/planets/');
+  console.log(res.data);
+}
+//erro handling with await
+async function getPlanets(){
+  try{
+    const res= await axios.get('https://swapi.co/api/planets/');
+    console.log(res.data);
+  }catch(e){
+    console.log('erro',e)
+  }
+}
