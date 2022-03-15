@@ -42,45 +42,57 @@
 
 //************************************************ */
 //Async and Await
-async function add(x,y){//async function return a promise
-  if(typeof x!=='number'||typeof y!=='number'){
-    throw 'inputs must be a number'//reject
-  }
-  return x+y;//resolve
+// async function add(x,y){//async function return a promise
+//   if(typeof x!=='number'||typeof y!=='number'){
+//     throw 'inputs must be a number'//reject
+//   }
+//   return x+y;//resolve
+// }
+// add().then((retorno)=>{
+//   console.log(`o valor da  soma foi:${retorno}`)
+// }).catch((err)=>{
+//     console.log(err)
+// })
+// //without async
+// function add(x,y){
+//   return new Promise((resolve,reject)=>{
+//     if(typeof x!=='number'||typeof y!=='number'){
+//       reject('inputs must be a number')//reject
+//     }
+//     resolve(x+y);
+//   })
+// }
+// //AWAIT   Await eliminates the use of callbacks in .then()and .catch(). 
+// //without await
+// function getPlanets(){
+//   return axios.get('https://swapi.co/api/planets/');
+// }
+// getPlanets().then((res)=>{
+//   console.log(res.data);
+// })
+// //with await
+// async function getPlanets(){
+//   const res= await axios.get('https://swapi.co/api/planets/');
+//   console.log(res.data);
+// }
+// //erro handling with await
+// async function getPlanets(){
+//   try{
+//     const res= await axios.get('https://swapi.co/api/planets/');
+//     console.log(res.data);
+//   }catch(e){
+//     console.log('erro',e)
+//   }
+// }
+//testing objects
+function label(task,labelTitle){//constructor
+  this.task=task;
+  this.labelTitle=labelTitle;
 }
-add().then((retorno)=>{
-  console.log(`o valor da  soma foi:${retorno}`)
-}).catch((err)=>{
-    console.log(err)
-})
-//without async
-function add(x,y){
-  return new Promise((resolve,reject)=>{
-    if(typeof x!=='number'||typeof y!=='number'){
-      reject('inputs must be a number')//reject
-    }
-    resolve(x+y);
-  })
-}
-//AWAIT   Await eliminates the use of callbacks in .then()and .catch(). 
-//without await
-function getPlanets(){
-  return axios.get('https://swapi.co/api/planets/');
-}
-getPlanets().then((res)=>{
-  console.log(res.data);
-})
-//with await
-async function getPlanets(){
-  const res= await axios.get('https://swapi.co/api/planets/');
-  console.log(res.data);
-}
-//erro handling with await
-async function getPlanets(){
-  try{
-    const res= await axios.get('https://swapi.co/api/planets/');
-    console.log(res.data);
-  }catch(e){
-    console.log('erro',e)
-  }
+function task(title,color,date,check,description){// constructor
+  this.title=title;
+  this.color= color;
+  this.date= date;
+  this.check= check;
+  this.description=description;   
 }
