@@ -85,14 +85,28 @@
 //   }
 // }
 //testing objects
-function label(task,labelTitle){//constructor
-  this.task=task;
-  this.labelTitle=labelTitle;
+function label(task){//constructor
+  {
+    this.task=[task];
+  }
 }
-function task(title,color,date,check,description){// constructor
+function task(title,description,check,color,date){// constructor
   this.title=title;
+  this.description=description;   
+  this.check= check; 
   this.color= color;
   this.date= date;
-  this.check= check;
-  this.description=description;   
+}
+mytodo={
+  label:{
+    task:[
+      {
+        title:'first task',
+        description:'for do today',
+        check:false,
+        color:'blue',
+        date:'22/03/2022'
+      }
+    ]
+  }
 }
