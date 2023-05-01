@@ -85,28 +85,28 @@
 //   }
 // }
 //testing objects
-function label(task){//constructor
-  {
-    this.task=[task];
+class label {
+  constructor(task) {
+    {
+      this.task = [task];
+    }
+  }
+  addTask(task){
+    this.task.push(task);
   }
 }
-function task(title,description,check,color,date){// constructor
-  this.title=title;
-  this.description=description;   
-  this.check= check; 
-  this.color= color;
-  this.date= date;
-}
-mytodo={
-  label:{
-    task:[
-      {
-        title:'first task',
-        description:'for do today',
-        check:false,
-        color:'blue',
-        date:'22/03/2022'
-      }
-    ]
+class task {
+  constructor(taskName, description, check, color, date) {
+    this.taskName = taskName;
+    this.description = description;
+    this.check = check;
+    this.color = color;
+    this.date = date;
+  }
+  addName(taskName){
+    this.taskName=taskName;
+  }
+  addDescription(description){
+    this.description=description
   }
 }
