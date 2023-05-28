@@ -41,7 +41,7 @@
 // console.log('Request Sent!');
 
 //************************************************ */
-//Async and Await
+// Async and Await
 // async function add(x,y){//async function return a promise
 //   if(typeof x!=='number'||typeof y!=='number'){
 //     throw 'inputs must be a number'//reject
@@ -84,29 +84,49 @@
 //     console.log('erro',e)
 //   }
 // }
+//************************************************ */
 //testing objects
-class label {
-  constructor(task) {
-    {
-      this.task = [task];
-    }
-  }
-  addTask(task){
-    this.task.push(task);
-  }
-}
-class task {
-  constructor(taskName, description, check, color, date) {
-    this.taskName = taskName;
-    this.description = description;
-    this.check = check;
-    this.color = color;
-    this.date = date;
-  }
-  addName(taskName){
-    this.taskName=taskName;
-  }
-  addDescription(description){
-    this.description=description
-  }
-}
+// class label {
+//   constructor(task) {
+//     {
+//       this.task = [task];
+//     }
+//   }
+//   addTask(task){
+//     this.task.push(task);
+//   }
+// }
+// class task {
+//   constructor(taskName, description, check, color, date) {
+//     this.taskName = taskName;
+//     this.description = description;
+//     this.check = check;
+//     this.color = color;
+//     this.date = date;
+//   }
+//   addName(taskName){
+//     this.taskName=taskName;
+//   }
+//   addDescription(description){
+//     this.description=description
+//   }
+// }
+//************************************************ */
+// let a=5
+// let b='5'
+// function compare(numberA,numberB){
+//   if(numberA===numberB){
+//     console.log('numberes are the same');
+//   }else{
+//     console.log('numbers are different '+typeof numberA+' and '+typeof numberB);
+//   }
+// }
+// compare(a,b)
+//************************************************ */
+// function soma(...numbers){
+//   // for(let n=0;n=numbers.length;n++){
+//   //   return n+n;
+//   // } or
+//   return numbers.reduce((sum,n)=>sum+=n,0);
+// };
+// console.log(soma(1,2,3));
