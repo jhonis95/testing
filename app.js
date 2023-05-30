@@ -130,3 +130,10 @@
 //   return numbers.reduce((sum,n)=>sum+=n,0);
 // };
 // console.log(soma(1,2,3));
+//************************************************ */
+//type covertion
+//string to number
+const numString="5";
+const numInt=Number(numString);
+console.log(numInt);
+console.log(Date())
