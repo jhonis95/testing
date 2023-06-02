@@ -133,7 +133,42 @@
 //************************************************ */
 //type covertion
 //string to number
-const numString="5";
-const numInt=Number(numString);
-console.log(numInt);
-console.log(Date())
+// const numString="5";
+// const numInt=Number(numString);
+// console.log(numInt);
+// console.log(Date())
+//************************************************ */
+// arrays
+// const arr1=[1,2,3];
+// console.log(arr1.length);
+// let sum=0;
+// for(let num of arr1){
+//     sum+=num;
+// }
+// console.log(sum);
+
+// //for read a object
+// const movieReviews = {
+// 	Arrival                : 9.5,
+// 	Alien                  : 9,
+// 	Amelie                 : 8,
+// 	'In Bruges'            : 9,
+// 	Amadeus                : 10,
+// 	'Kill Bill'            : 8,
+// 	'Little Miss Sunshine' : 8.5,
+// 	Coraline               : 7.5
+// };
+// for (let movie of Object.keys(movieReviews)) {
+// 	console.log(`You rated ${movie} - ${movieReviews[movie]}`);
+// }
+//************************************************ */
+//playing with events
+// const button= document.getElementById("btn");
+// const arryColor=['red','green','blue']
+// let random=''
+// //in this code i don't need to pass the random and the array as a parameter in the event listener
+// button.addEventListener('click',()=>{
+// 	random=Math.floor(Math.random()*arryColor.length)
+// 	button.style.backgroundColor=arryColor[random];
+// 	button.style.color='white';
+// })
