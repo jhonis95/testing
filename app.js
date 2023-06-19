@@ -172,3 +172,55 @@
 // 	button.style.backgroundColor=arryColor[random];
 // 	button.style.color='white';
 // })
+//************************************************ */
+// functional classes
+// function soma(){
+// 	return this.num1+this.num2;
+// }
+// function sub(){
+// 	return this.num1-this.num2;
+// }
+// function cal(num1,num2){//arguments with the same name is ceatch by this becouse of the scope
+// 	return {
+// 		num1,
+// 		num2,
+// 		soma,
+// 	}
+// }
+// function createCalculator(subtracao, ...args){
+// 	const calculo=cal(...args) 
+// 	return Object.assign(calculo/*inheretacen */,{
+//         /*add the new methoth */
+//         subtracao
+// 	})
+// }
+// const letsUse= createCalculator(sub,5,3);
+// console.log(letsUse)
+//************************************************ */
+function soma(){
+	return this.num1+this.num2;
+}
+function subtracao(){
+	return this.num1-this.num2;
+}
+function setNum1(input1){
+	return this.num1=input1;
+}
+function setNum2(input2){
+	return this.num2=input2
+}
+function cal(num1,num2){
+	return {
+		num1,
+		num2,
+		setNum1,
+        setNum2,
+	}
+}
+function createCalculator(...func){
+	const calculo=cal()
+    let [sum,sub] = func
+	return Object.assign(calculo,{
+        sum,sub
+	})
+}
