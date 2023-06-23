@@ -10,12 +10,20 @@
 <body>
     <h1>test</h1>
     <h4 id="output"></h4>
-    <label for="input">input</label>
-    <input type="text" name="input" id="">
+    <label for="name">task</label>
+    <input type="text" name="name" id="task-title">
+    <label for="input">description</label>
+    <input type="text" name="description" id="task-description">
+    <label for="color">color</label>
+    <input type="color" name="color" id="task-color">
+    <label for="date">date</label>
+    <input type="date" name="date" id="task-date">
+    <button id="add-task-btn">add</button>
 
 
-    <button id="btn">change color</button>
+    <!-- <button id="btn">change color</button> -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="test.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

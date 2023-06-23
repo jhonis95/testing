@@ -225,3 +225,101 @@
 //         sum,sub
 // 	})
 // }
+//************************************************ */
+//modules
+//test one(import the module and use)
+// import cal from "./test.js"
+// const calculator=cal;
+// calculator.setNum1(prompt("fist number one"))
+// calculator.setNum2(prompt("fist number two"))
+// calculator.soma()
+//test two use henrirentence(adding the cal functions6)
+// function mutiplicacao(){
+//     return console.log(parseInt(this.num1)*parseInt(this.num2))
+// }
+// function soma(){
+//     return console.log(parseInt(this.num1)+parseInt(this.num2))
+// }
+// function subtracao(){
+//     return console.log(parseInt(this.num1)-parseInt(this.num2))
+// }
+// function createCalculator(...func){
+// 	const calculo=cal
+//     let [sum,sub,mut] = func
+// 	return Object.assign(calculo,{
+//         sum,sub,mut
+//     })
+// }
+// const calculo=createCalculator(soma,subtracao,mutiplicacao)
+// calculo.setNum1(prompt("fist number one"))
+// calculo.setNum2(prompt("fist number two"))
+// calculo.mut()
+//************************************** */
+import App from "./test.js"
+console.log(App)
+
+// const addTaskBtn= document.getElementById("add-task-btn")
+
+// const taskNameInp= document.getElementById("task-title")
+// const taskDescriptionInp= document.getElementById("task-description")
+// const taskColorInp= document.getElementById("task-color")
+// const taskDateInp= document.getElementById("task-date")
+
+// const task={
+//     taskNameInp,
+//     taskDescriptionInp,
+//     taskColorInp,
+//     taskDateInp
+// }
+// class Task{
+//     constructor() {
+//         this.title,
+//         this.description,
+//         this.color,
+//         this.date,
+//         this.check=false
+//     }
+//     setParameters=(newName,newDescription,newColor,newDate)=>{
+//         this.title=newName.value,
+//         this.description=newDescription.value,
+//         this.color=newColor.value,
+//         this.date=newDate.value
+//         return(
+//             {
+//                 title : this.title,
+//                 description : this.description,
+//                 color: this.color,
+//                 date: this.date,
+//                 check: this.check
+//             }
+//         )
+//     }
+// }
+// class ToDo extends Task{
+//     constructor(){
+//         super();
+//         this.toDoName
+//         this.toDoTaskList=[]
+//     }
+//     addTask(task){
+//         this.toDoTaskList.push(task)
+//     }
+//     set toDoName(input){
+//         this.toDoName=input
+//     }
+// }
+// class ToApp extends ToDo{
+//     constructor(addTaskBtn,taskInput){
+//         super();
+//         this.addTaskBtn=addTaskBtn;
+        
+//         this.addTaskBtn.addEventListener('click',this.addTask(this.setParameters(
+//             taskInput.taskNameInp,
+//             taskInput.taskDescriptionInp,
+//             taskInput.taskColorInp,
+//             taskInput.taskDateInp
+//         )));
+//     }
+// }
+// const mytodo= new ToApp(addTaskBtn,task)
+// console.log(mytodo)
