@@ -255,9 +255,12 @@
 // calculo.setNum2(prompt("fist number two"))
 // calculo.mut()
 //************************************** */
-import App from "./test.js"
-console.log(App)
+//not working inport
+// import testModule from "./modules/test.js"
+// console.log(testModule)
 
+
+// import ToDo from "./modules/test.js";
 // const addTaskBtn= document.getElementById("add-task-btn")
 
 // const taskNameInp= document.getElementById("task-title")
@@ -265,61 +268,45 @@ console.log(App)
 // const taskColorInp= document.getElementById("task-color")
 // const taskDateInp= document.getElementById("task-date")
 
-// const task={
+// const taskInputs={
 //     taskNameInp,
 //     taskDescriptionInp,
 //     taskColorInp,
 //     taskDateInp
 // }
-// class Task{
-//     constructor() {
-//         this.title,
-//         this.description,
-//         this.color,
-//         this.date,
-//         this.check=false
-//     }
-//     setParameters=(newName,newDescription,newColor,newDate)=>{
-//         this.title=newName.value,
-//         this.description=newDescription.value,
-//         this.color=newColor.value,
-//         this.date=newDate.value
-//         return(
-//             {
-//                 title : this.title,
-//                 description : this.description,
-//                 color: this.color,
-//                 date: this.date,
-//                 check: this.check
-//             }
-//         )
-//     }
-// }
-// class ToDo extends Task{
-//     constructor(){
-//         super();
-//         this.toDoName
-//         this.toDoTaskList=[]
-//     }
-//     addTask(task){
-//         this.toDoTaskList.push(task)
-//     }
-//     set toDoName(input){
-//         this.toDoName=input
-//     }
-// }
+
 // class ToApp extends ToDo{
 //     constructor(addTaskBtn,taskInput){
 //         super();
+//         this.listOfToDo=[]
 //         this.addTaskBtn=addTaskBtn;
-        
-//         this.addTaskBtn.addEventListener('click',this.addTask(this.setParameters(
-//             taskInput.taskNameInp,
-//             taskInput.taskDescriptionInp,
-//             taskInput.taskColorInp,
-//             taskInput.taskDateInp
-//         )));
+//         if(taskInput){
+//             this.taskInputTitle=taskInput.taskNameInp
+//             this.taskInputDescription=taskInput.taskDescriptionInp
+//             this.taskInputColor=taskInput.taskColorInp
+//             this.taskInputDate=taskInput.taskDateInp
+//         }
+
+//         this.taskInputTitle.addEventListener('change',(event)=>{
+//             this.setTaskTitle(event.target.value)
+//         })
+//         this.taskInputDescription.addEventListener('change',(event)=>{
+//             this.setTaskTitle(event.target.value)
+//         })
+//         this.taskInputColor.addEventListener('change',(event)=>{
+//             this.setTaskColor(event.target.value)
+//         })
+//         this.taskInputDate.addEventListener('change',(event)=>{
+//             this.setTaskDate(event.target.value)
+//         })
+//         this.addTaskBtn.addEventListener('click',this.addTask)
+//     }
+//     printToDoList(){
+//         console.log(this.listOfToDo)
 //     }
 // }
-// const mytodo= new ToApp(addTaskBtn,task)
-// console.log(mytodo)
+const showinlog=()=>{
+    console.log("oi from file")
+}
+console.log("oi from file")
+console.log("oi from file")

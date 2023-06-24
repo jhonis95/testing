@@ -32,44 +32,36 @@ class Task{
         this.date,
         this.check=false
     }
-    setParameters=(newName,newDescription,newColor,newDate)=>{
-        return (
-            this.name=newName,
-            this.description=newDescription,
-            this.check=newColor,
-            this.date=newDate
-        )
+    setTaskTitle=(title)=>{
+        this.title=title
+    }
+    setTaskDescription=(taskInput)=>{
+        this.title=taskInput
+    }
+    setTaskColor=(taskInput)=>{
+        this.title=taskInput
+    }
+    setTaskDate=(taskInput)=>{
+        this.title=taskInput
+    }
+    setTaskCheck=(taskInput)=>{
+        this.title=taskInput
     }
 }
 class ToDo extends Task{
     constructor(){
         super();
-        this.toDoName
-        this.toDoTaskList=Array[""]
+        this.toDoName=""
+        this.toDoTaskList=[]
     }
-    addTask(){
-
-    }
-    set toDoName(input){
-        this.toDoName=input
+    addTask=()=>{
+        this.toDoTaskList.push({
+            title : this.title,
+            description : this.description,
+            color: this.color,
+            date: this.date,
+            // check: this.check
+        })
     }
 }
-class App extends ToDo{
-    constructor(addTaskBtn,taskInput){
-        super();
-        this.addTaskBtn=addTaskBtn;
-        if(taskInput){
-            this.taskTitle=taskInput.taskTitle;
-            this.taskDescription=taskInput.taskDescription;
-            this.taskColor=taskInput.taskColor;
-            this.taskDate=taskInput.taskDate;
-        }
-        this.addTaskBtn.addEventListener('click',this.addTask(this.setParameters(
-            this.taskColor,
-            this.taskDescription,
-            this.taskColor,
-            this.taskDate
-        )));
-    }
-} 
-export default App;
+export default ToDo
