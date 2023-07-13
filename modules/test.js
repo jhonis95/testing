@@ -24,44 +24,43 @@
 // 	})
 // }
 /* ***************************** */
-class Task{
-    constructor() {
-        this.title,
-        this.description,
-        this.color,
-        this.date,
-        this.check=false
-    }
-    setTaskTitle=(title)=>{
-        this.title=title
-    }
-    setTaskDescription=(taskInput)=>{
-        this.title=taskInput
-    }
-    setTaskColor=(taskInput)=>{
-        this.title=taskInput
-    }
-    setTaskDate=(taskInput)=>{
-        this.title=taskInput
-    }
-    setTaskCheck=(taskInput)=>{
-        this.title=taskInput
-    }
-}
-class ToDo extends Task{
-    constructor(){
-        super();
-        this.toDoName=""
-        this.toDoTaskList=[]
-    }
-    addTask=()=>{
-        this.toDoTaskList.push({
-            title : this.title,
-            description : this.description,
-            color: this.color,
-            date: this.date,
-            // check: this.check
-        })
-    }
-}
-export default ToDo
+// class Task{
+//     constructor() {
+//         this.title,
+//         this.description,
+//         this.color,
+//         this.date,
+//         this.check=false
+//     }
+//     setTaskTitle=(title)=>{
+//         this.title=title
+//     }
+//     setTaskDescription=(taskInput)=>{
+//         this.title=taskInput
+//     }
+//     setTaskColor=(taskInput)=>{
+//         this.title=taskInput
+//     }
+//     setTaskDate=(taskInput)=>{
+//         this.title=taskInput
+//     }
+//     setTaskCheck=(taskInput)=>{
+//         this.title=taskInput
+//     }
+// }
+// export default class ToDo extends Task{
+//     constructor(){
+//         super();
+//         this.toDoName=""
+//         this.toDoTaskList=[]
+//     }
+//     addTask=()=>{
+//         this.toDoTaskList.push({
+//             title : this.title,
+//             description : this.description,
+//             color: this.color,
+//             date: this.date,
+//             // check: this.check
+//         })
+//     }
+// }
